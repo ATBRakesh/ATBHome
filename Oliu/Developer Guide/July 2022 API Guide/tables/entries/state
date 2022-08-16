@@ -1,0 +1,25 @@
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">state</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>init</li>
+      <li>invitation</li>
+      <li>request</li>
+      <li>response</li>
+      <li>active</li>
+      <li>error</li>
+      <li>inactive</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">V2</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>

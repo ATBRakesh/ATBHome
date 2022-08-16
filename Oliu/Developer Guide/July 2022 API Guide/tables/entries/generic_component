@@ -1,0 +1,13 @@
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">table_field</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+  </div>
+</li>

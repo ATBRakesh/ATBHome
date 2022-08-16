@@ -1,0 +1,12 @@
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>

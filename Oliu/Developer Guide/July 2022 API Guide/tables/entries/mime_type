@@ -1,0 +1,17 @@
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">mime_type</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">
+        Common MIME Types
+      </a>
+    </p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>

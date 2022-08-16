@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onWindowChange",
+    "workbench.preferredDarkColorTheme": "Monokai",
+    "workbench.preferredHighContrastColorTheme": "Monokai",
+    "workbench.preferredHighContrastLightColorTheme": "Monokai"
+}

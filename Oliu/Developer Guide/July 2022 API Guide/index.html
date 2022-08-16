@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Oliu API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: #1B58D9;
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: #1B58D9;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #1B58D9;
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kv {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .il {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999;
+}
+.highlight .sa {
+  color: #1B58D9;
+  font-weight: bold;
+}
+.highlight .sb {
+  color: #6C99E5;
+}
+.highlight .sc {
+  color: #6C99E5;
+}
+.highlight .sd {
+  color: #6C99E5;
+}
+.highlight .s2 {
+  color: #6C99E5;
+}
+.highlight .se {
+  color: #6C99E5;
+}
+.highlight .sh {
+  color: #6C99E5;
+}
+.highlight .si {
+  color: #6C99E5;
+}
+.highlight .sx {
+  color: #6C99E5;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #6C99E5;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .s, .highlight .dl {
+  color: #6C99E5;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .nb {
+  color: #0086B3;
+}
+.highlight .nc {
+  color: #445588;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3c5d5d;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #74B977;
+}
+.highlight .nf, .highlight .fm {
+  color: #74B977;
+}
+.highlight .nl {
+  color: #74B977;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #FC1E62;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .nv, .highlight .vm {
+  color: #008080;
+}
+.highlight .ow {
+  color: #1B58D9;
+}
+.highlight .o {
+  color: #1B58D9;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight {
+  background-color: #f8f8f8;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link href="stylesheets/screen-53b760e6.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-fbd00ca3.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-f94a9590.js"></script>
+
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body onload="" class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#glossary" class="toc-h1 toc-link" data-title="Glossary">Glossary</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#connection" class="toc-h2 toc-link" data-title="Connection">Connection</a>
+                  </li>
+                  <li>
+                    <a href="#credential-offer" class="toc-h2 toc-link" data-title="Credential Offer">Credential Offer</a>
+                  </li>
+                  <li>
+                    <a href="#decentralized-identifier-did" class="toc-h2 toc-link" data-title="Decentralized Identifier (DID)">Decentralized Identifier (DID)</a>
+                  </li>
+                  <li>
+                    <a href="#holder" class="toc-h2 toc-link" data-title="Holder">Holder</a>
+                  </li>
+                  <li>
+                    <a href="#issuer" class="toc-h2 toc-link" data-title="Issuer">Issuer</a>
+                  </li>
+                  <li>
+                    <a href="#verification-request" class="toc-h2 toc-link" data-title="Verification Request">Verification Request</a>
+                  </li>
+                  <li>
+                    <a href="#verifier" class="toc-h2 toc-link" data-title="Verifier">Verifier</a>
+                  </li>
+                  <li>
+                    <a href="#schema" class="toc-h2 toc-link" data-title="Schema">Schema</a>
+                  </li>
+                  <li>
+                    <a href="#wallet" class="toc-h2 toc-link" data-title="Wallet">Wallet</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#token" class="toc-h2 toc-link" data-title="Token">Token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#connections" class="toc-h1 toc-link" data-title="Connections">Connections</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-invitation" class="toc-h2 toc-link" data-title="Create Invitation">Create Invitation</a>
+                  </li>
+                  <li>
+                    <a href="#get-connections" class="toc-h2 toc-link" data-title="Get Connections">Get Connections</a>
+                  </li>
+                  <li>
+                    <a href="#get-connection-by-id" class="toc-h2 toc-link" data-title="Get Connection by ID">Get Connection by ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-connection" class="toc-h2 toc-link" data-title="Delete Connection">Delete Connection</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#credentials" class="toc-h1 toc-link" data-title="Credentials">Credentials</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#issue-credential" class="toc-h2 toc-link" data-title="Issue Credential">Issue Credential</a>
+                  </li>
+                  <li>
+                    <a href="#get-credentials" class="toc-h2 toc-link" data-title="Get Credentials">Get Credentials</a>
+                  </li>
+                  <li>
+                    <a href="#get-credential-by-id" class="toc-h2 toc-link" data-title="Get Credential by ID">Get Credential by ID</a>
+                  </li>
+                  <li>
+                    <a href="#revoke-credential" class="toc-h2 toc-link" data-title="Revoke Credential">Revoke Credential</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#verification-requests" class="toc-h1 toc-link" data-title="Verification Requests">Verification Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#send-verification-request" class="toc-h2 toc-link" data-title="Send Verification Request">Send Verification Request</a>
+                  </li>
+                  <li>
+                    <a href="#get-verification-requests" class="toc-h2 toc-link" data-title="Get Verification Requests">Get Verification Requests</a>
+                  </li>
+                  <li>
+                    <a href="#get-verification-request-by-id" class="toc-h2 toc-link" data-title="Get Verification Request by ID">Get Verification Request by ID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#webhooks" class="toc-h1 toc-link" data-title="Webhooks">Webhooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#connections-webhook" class="toc-h2 toc-link" data-title="Connections Webhook">Connections Webhook</a>
+                  </li>
+                  <li>
+                    <a href="#credentials-webhook" class="toc-h2 toc-link" data-title="Credentials Webhook">Credentials Webhook</a>
+                  </li>
+                  <li>
+                    <a href="#verification-requests-webhook" class="toc-h2 toc-link" data-title="Verification Requests Webhook">Verification Requests Webhook</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to Oliu, an open identity platform that enables you and your team to build trusted, seamless, and elegant experiences for your customers.</p>
+
+<p>These APIs provide methods to connect with digital wallets, create and issue credentials, and receive and verify information from users. This page describes these functions in detail and provides a method to retrieve authorization for making calls, receiving information and everything else you need to get started.</p>
+
+<p>Below is a user flow diagram of how each of these individual components work together:</p>
+
+<p><img class="diagram" src="images/diagrams/introduction-87f7f232.png"/></p>
+
+<p>Also, for your reference is breakdown of the roles:</p>
+
+<ul>
+<li><strong>Verifier Organization</strong>: Organization that consumes a credential the user already has for the purpose of either: (1) verifying that their credential meets the a set criteria (e.g. age must be greater than 18) or to (2) verify that they have a specified credential (e.g. must have full name credential issued by the Government of Alberta)</li>
+<li><strong>Issuer Organization</strong>: Organization that has the ability to issue credentials to the users based on a credential definition that their organization has created (e.g. ATB can issue a savings bank account credential based on the savings bank account credential definition they have created)</li>
+<li><strong>Wallet</strong>: The application that the user interacts with that allows them to connect with organizations, receive and store credentials from organizations, and send requested credentials to organizations for verification.</li>
+<li><strong>User</strong>: The owner and manager of their credentials. The user interacts with their wallet to keep track of their credentials and ensure that they have the most up to date copy of their credentials from organizations.</li>
+</ul>
+<h1 id='glossary'>Glossary</h1><h3 id='connection'>Connection</h3>
+<p>A digital relationship between 2 entities that is underpinned by a cryptographically verifiable communications channel established using an Agent to Agent protocol.</p>
+<h3 id='credential-offer'>Credential Offer</h3>
+<p>A credential that is being issued to the end user wallet holder in the form of an offer that can be accepted or rejected.</p>
+<h3 id='decentralized-identifier-did'>Decentralized Identifier (DID)</h3>
+<p>A unique identifier that represents an entity interacting with DIDcomm and/or Hyperledger Indy. DID’s are created and controlled by some participant, albeit an organization or wallet holder.</p>
+
+<ul>
+<li><strong>Public DID</strong>: A DID that has been written to the ledger and is publicly addressable.</li>
+<li><strong>Private DID</strong>: Facilitates connections for DIDcomm message exchange, these are not written to the ledger.</li>
+</ul>
+<h3 id='holder'>Holder</h3>
+<p>A role played by an Entity when it is issued a Credential by an Issuer. The Holder may or may not be the Subject of the Credential. (There are many use cases in which the Holder is not the Subject, e.g., a birth certificate where the Subject is a baby and both the mother and father may be Holders. Another case is a Credential Registry).</p>
+<h3 id='issuer'>Issuer</h3>
+<p>The Entity that issues a Credential to a Holder.</p>
+<h3 id='verification-request'>Verification Request</h3>
+<p>The data structure sent by a Verifier to a Holder that describes the Proof required by the Verifier.</p>
+<h3 id='verifier'>Verifier</h3>
+<p>The party that is requesting a verified digital credential in order to provide the holder with access to their services.</p>
+<h3 id='schema'>Schema</h3>
+<p>A machine-readable definition of the semantics of a data structure. Schemas are used to define the Attributes used in one or more Credential Definitions.</p>
+<h3 id='wallet'>Wallet</h3>
+<p>A software module, and optionally an associated hardware module, for securely storing and accessing Private Keys, Link Secrets, other sensitive cryptographic key material, and other Private Data used by an Entity.</p>
+<h1 id='authentication'>Authentication</h1>
+<p>Oliu uses a software-level credentials strategy that allows you to access your resources without providing a username and password each time an API call is made. This strategy is based on a pair of <code>Client ID</code> and <code>Client Secret</code>.</p>
+
+<p>To call the API, Oliu uses a <code>bearer-token</code>-based authentication. Whoever can generate these tokens should also be responsible for controlling the API calls made by the clients. This is why considering your <code>Client ID</code> and <code>Client Secret</code> as secrets is extremely important.</p>
+
+<p>The bearer tokens that are used to make calls to the API can be retrieved using the following endpoint <code>https://api.oliu.id/auth/token</code>.</p>
+<h2 id='token'>Token</h2>
+<p>In order to request the token, the caller should also know the <code>Client ID</code> and <code>Client Secret</code>, which will be provided to you upon registration in the Oliu Studio developer dashboard.
+<img class="diagram" src="images/api_keys_access_flow_updated-b2e4d20c.png"/></p>
+
+<p>The response body from your <code>POST</code> call to <code>https://api.oliu.id/auth/token</code> will contain <code>access_token</code> that should be used with every subsequent call to the API.</p>
+
+<p><code>Authorization: Bearer 2vDEuRtG0k50li9FCxDCQEVDvxl3</code></p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">'https://api.oliu.id/auth/token'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Authorization: Basic {TOKEN}'</span> <span class="se">\</span>
+<span class="nt">--header</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+<span class="nt">--data-urlencode</span> <span class="s1">'grant_type=client_credentials'</span>
+</code></pre></div>
+<blockquote>
+<p><code>TOKEN</code> is the base64 encoded value of <code>Client ID:Client Secret</code>.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"refresh_token_expires_in"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"api_product_list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[Oliu-subscription-authenticated, apigee-oauth2, oliu-platform]"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"api_product_list_json"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Oliu-subscription-authenticated"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"apigee-oauth2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"oliu-platform"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"organization_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your Organization"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"developer_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"youremail@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BearerToken"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1653949056165"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5mUxXmc2kClxSIsSgTtrrbE8Aj2i8JAPg5yuFnA51W2EENcN"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2vDEuRtG0k50li9FCxDCQEVDvxl3"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"application_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2f652ad2-7f44-47dc-85a3-aaba583107b7"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3599"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"refresh_count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"approved"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='https-request'>HTTPS Request</h3>
+<p><code>POST https://api.oliu.id/auth/token</code></p>
+<h1 id='connections'>Connections</h1>
+<p>To issue credentials, verify credentials or do any other kind of interaction with a credential holder, an issuer or verifier needs to establish a connection with them. Invitations are sent to the connection to establish a connection. Invitations can include a link or QR code that a credential holder can use to become a connection.</p>
+
+<p><img class="diagram" src="images/diagrams/connections-819bb4fd.png"/></p>
+<h2 id='create-invitation'>Create Invitation</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/connections'</span> <span class="se">\</span>
+  <span class="nt">-X</span> <span class="s1">'POST'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "interop_protocol": "v1"
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"invitation_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a534ca2-1736-5513-af3a-1afb3ac53a12"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"invitation_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/endpoint?c_i=eyJAdHlwZSI6ICIuLi4iLCAiLi4uIjogIi4uLiJ9XX0="</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"await_response"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Creates an invitation that can be sent to a credential holder to establish a connection with them.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>POST /connections</code></p>
+<h3 id='request-body-parameters'>Request Body Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Body Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">interop_protocol</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>v1</li>
+      <li>v2</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">v1</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-connections'>Get Connections</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/connections/'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"error_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No DIDDoc provided; cannot connect to public DID"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"their_did"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WgWxqztrNooG92RXvxSTWv"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"their_public_did"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cpBmR3FqGKWi5EyUbpRY8"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"their_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Label"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves a list of all connections.</p>
+<h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>GET /connections</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Query Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">state</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>init</li>
+      <li>invitation</li>
+      <li>request</li>
+      <li>response</li>
+      <li>active</li>
+      <li>error</li>
+      <li>inactive</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">V2</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-connection-by-id'>Get Connection by ID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/connections/3fa85f64-5717-4562-b3fc-2c963f66afa6'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"their_did"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WgWxqztrNooG92RXvxSTWv"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"their_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bob"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"their_public_did"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2cpBmR3FqGKWi5EyUbpRY8"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves the details of a specific connection.</p>
+<h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>GET /connections/{connection_id}</code></p>
+<h2 id='delete-connection'>Delete Connection</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/connections/3fa85f64-5717-4562-b3fc-2c963f66afa6'</span> <span class="se">\</span>
+  <span class="nt">-X</span> <span class="s1">'DELETE'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{}</span><span class="w">
+</span></code></pre></div>
+<p>Deletes a connection.</p>
+<h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>DELETE /connections/{connection_id}</code></p>
+<h1 id='credentials'>Credentials</h1>
+<p>The following endpoints describe how to define and issue credentials to credential holders.</p>
+
+<p><img class="diagram" src="images/diagrams/credentials-d36ea677.png"/></p>
+<h2 id='issue-credential'>Issue Credential</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/credentials'</span> <span class="se">\</span>
+  <span class="nt">-X</span> <span class="s1">'POST'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "comment": "My Comment",
+        "connection_id": "2090c57c-8409-43c8-9c23-b7abca07d62e",
+        "credential_definition_id": "M4ZvcjqQPxt4QhqVM7pPb1:3:CL:32665:default",
+        "schema_id": "J6nTnUo3YLayzc2GUUctb1:2:Account Car 270:1.0",
+        "interop_protocol": "v1",
+        "attributes": [
+          {
+            "mime_type": "image/jpeg",
+            "name": "address",
+            "value": "1234 5th Ave"
+          },
+          {
+            "name": "last_name",
+            "value": "Smith"
+          }
+        ]
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"schema_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J6nTnUo3YLayzc2GUUctb1:2:Andorra Universal 5510:1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2090c57c-8409-43c8-9c23-b7abca07d62e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_definition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M4ZvcjqQPxt4QhqVM7pPb1:3:CL:33579:default"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"be357b7a-c180-4188-a4c6-760a10961cd6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T20:59:39.931462Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T20:59:39.931462Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Issue a credential to a connection i.e send it to a connection’s digital wallet. Connections can review the credential and then add it to their digital wallet.</p>
+<h3 id='https-request-6'>HTTPS Request</h3>
+<p><code>POST /credentials</code></p>
+<h3 id='request-body-parameters-2'>Request Body Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Body Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <!-- connection_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- credential_definition_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">credential_definition_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- attributes -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">attributes</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>object[]</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+      <ul class="table-elements">
+        
+            
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">name</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+        
+            
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">value</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+        
+            <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">mime_type</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">
+        Common MIME Types
+      </a>
+    </p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+        
+      </ul>
+    
+  </div>
+</li>
+      
+      <!-- interop_protocol -->
+      <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">interop_protocol</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>v1</li>
+      <li>v2</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">v1</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+      <!-- comment -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">comment</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- schema_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">schema_id</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-credentials'>Get Credentials</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/credentials'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span> <span class="se">\</span>
+</code></pre></div>
+<blockquote>
+<p>Example Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"credential_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"credential_definition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WgWxqztrNooG92RXvxSTWv:3:CL:20:tag"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"error_messsage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Credential definition identifier is not set in proposal"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"mime_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"favourite_drink"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"martini"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves all credential records issued.</p>
+<h3 id='https-request-7'>HTTPS Request</h3>
+<p><code>GET /credentials</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Query Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <!-- connection_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- state -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">state</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>init</li>
+      <li>invitation</li>
+      <li>request</li>
+      <li>response</li>
+      <li>active</li>
+      <li>error</li>
+      <li>inactive</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">V2</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-credential-by-id'>Get Credential by ID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/credentials/34421144-f8dd-497f-809b-595ebd114a44'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_definition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WgWxqztrNooG92RXvxSTWv:3:CL:20:tag"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Comment"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error_messsage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Credential definition identifier is not set in proposal"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"interop_protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_proposal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"mime_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/jpeg"</span><span class="p">,</span><span class="w"> 
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"favourite_drink"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"martini"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves a specific credential definition from the ledger.</p>
+<h3 id='https-request-8'>HTTPS Request</h3>
+<p><code>GET /credentials/{credential_exchange_id}</code></p>
+<h2 id='revoke-credential'>Revoke Credential</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/credentials/revoke'</span> <span class="se">\</span>
+  <span class="nt">-X</span> <span class="s1">'POST'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "connection_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "credential_exchange_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{}</span><span class="w">
+</span></code></pre></div>
+<p>Deletes a credential.</p>
+<h3 id='https-request-9'>HTTPS Request</h3>
+<p><code>POST /credentials/revoke</code></p>
+<h3 id='request-body-parameters-3'>Request Body Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Body Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <!-- connection_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- credential_exchange_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">credential_exchange_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+      
+    </ul>
+  </div>
+</div>
+<h1 id='verification-requests'>Verification Requests</h1>
+<p>The following endpoints describe how to verify credentials of credential holders.</p>
+
+<p><img class="diagram" src="images/diagrams/verification_requests-08d09cb1.png"/></p>
+<h2 id='send-verification-request'>Send Verification Request</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/verification_requests'</span> <span class="se">\</span>
+  <span class="nt">-X</span> <span class="s1">'POST'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+        "connection_id": "2090c57c-8409-43c8-9c23-b7abca07d62e",
+        "name": "VRT1",
+        "version": "1.0",
+        "interop_protocol": "v1",
+        "requested_attributes": [
+          {
+            "name": "first_name",
+            "non_revoked": {
+              "from": 1640995199,
+              "to": 1640995199
+            },
+            "restrictions": [
+              {
+                "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0",
+                "version": "1.0",
+                "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv"
+              },
+              {
+                "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name2:2.0",
+                "version": "2.0",
+                "issuer_did": "WgWxqztrNooG92RXvxSTWv"
+              },
+              {
+                "credential_definition_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                "schema_name": "Driver License"
+              }
+            ]
+          },
+          {
+            "name": "age",
+            "non_revoked": {
+              "from": 1640995199,
+              "to": 1640995199
+            },
+            "predicate_type": "&gt;=",
+            "predicate_value": 18,
+            "restrictions": [
+              {
+                "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name:1.0",
+                "version": "1.0",
+                "schema_issuer_did": "WgWxqztrNooG92RXvxSTWv"
+              },
+              {
+                "schema_id": "WgWxqztrNooG92RXvxSTWv:2:schema_name2:2.0",
+                "version": "2.0",
+                "issuer_did": "WgWxqztrNooG92RXvxSTWv"
+              },
+              {
+                "credential_definition_id": "WgWxqztrNooG92RXvxSTWv:3:CL:20:tag",
+                "schema_name": "Driver License"
+              }
+            ]
+          }
+        ]
+      }'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"presentation_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"84b73ee1-6c90-4a3f-9aec-dcc4e8552f21"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2090c57c-8409-43c8-9c23-b7abca07d62e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request_sent"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Creates a verification request and sends it to a connection.</p>
+<h3 id='https-request-10'>HTTPS Request</h3>
+<p><code>POST /verification_requests</code></p>
+<h3 id='request-body-parameters-4'>Request Body Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Body Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <!-- connection_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- name -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">name</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- version -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">version</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes -->
+      <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">requested_attributes</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>object[]</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Helpful Description Goes Here</p>
+    <ul class="table-elements">
+
+      <!-- requested_attributes: name -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">name</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: non_revoked -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">non_revoked</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>object[]</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+      <ul class="table-elements">
+        
+            
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">from</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>date(utc)</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+        
+            
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">to</span>
+    <div class="parameter-attributes">
+      <span class="required">required</span> <span>date(utc)</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+        
+      </ul>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions -->
+      <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">restrictions</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>object[]</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Helpful Description Goes Here</p>
+
+    <ul class="table-elements">
+
+      <!-- requested_attributes: restrictions: schema_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">schema_id</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions: schema_issuer_did -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">schema_issuer_did</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions: schema_name -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">schema_name</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions: schema_version -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">schema_version</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions: issuer_did -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">issuer_did</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: restrictions: credential_definition_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">credential_definition_id</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+    </ul>
+  </div>
+</li>
+      
+      <!-- requested_attributes: predicate_type -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">predicate_type</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+      <!-- requested_attributes: predicate_value -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">predicate_value</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+
+    </ul>
+  </div>
+</li>
+      
+      
+
+      <!-- interop_protocol -->
+      <li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">interop_protocol</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>v1</li>
+      <li>v2</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">v1</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-verification-requests'>Get Verification Requests</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/verification_requests'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"error_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your error message if one occurs."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"presentation_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"proposal_sent"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-31T23:59:59Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves all verification requests that have been verified. This endpoint can be used to check if those proofs have been received and verified. Alternatively, the endpoint can be used to access the credentials received through them.</p>
+<h3 id='https-request-11'>HTTPS Request</h3>
+<p><code>GET /verification_requests</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<div class="collapsible-table">
+  <div class="table-wrapper">
+
+    <div class="parameter-header">
+      <span class="table-header">Query Parameters</span>
+      <button type="button" class="parameter-header-button">EXPAND ALL</button>
+    </div>
+
+    <ul class="table-elements">
+
+      <!-- connection_id -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">connection_id</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>string</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Provide your description here.</p>
+    
+  </div>
+</li>
+      
+      <!-- state -->
+      
+
+<li class="table-element">
+  <button type="button" class="collapsible">
+    <i class="expand-circle bi bi-plus-circle"></i>
+    <span class="parameter-text">state</span>
+    <div class="parameter-attributes">
+      <span class="optional">optional</span> <span>enum</span>
+    </div>
+  </button>
+  <div class="collapsible-content" aria-collapsed="true">
+    <p>Enum Values:
+    <ul class="code-list">
+      <li>init</li>
+      <li>invitation</li>
+      <li>request</li>
+      <li>response</li>
+      <li>active</li>
+      <li>error</li>
+      <li>inactive</li>
+    </ul>
+    </p>
+    <p>Default: <span class="code-box-gray">V2</span></p>
+    <p>Helpful Description Goes Here</p>
+  </div>
+</li>
+
+    </ul>
+  </div>
+</div>
+<h2 id='get-verification-request-by-id'>Get Verification Request by ID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s1">'https://api.oliu.id/verification_requests/{presentation_exchange_id}'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer {TOKEN}'</span>
+</code></pre></div>
+<blockquote>
+<p>Response Example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"presentation_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"84b73ee1-6c90-4a3f-9aec-dcc4e8552f21"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2090c57c-8409-43c8-9c23-b7abca07d62e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request_sent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"error_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your error message here."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Retrieves a verification request that has been verified. This endpoint can be used to check if a proof has been received and verified. Alternatively, the endpoint can be used to access the credentials received through it.</p>
+<h3 id='https-request-12'>HTTPS Request</h3>
+<p><code>GET /verification_requests/{presentation_exchange_id}</code></p>
+<h1 id='webhooks'>Webhooks</h1>
+<p>Information about successful connections, accepted credentials, and proof requests are sent to the URL you provided during wallet configuration via POST requests whenever a record is created or its state property is updated.</p>
+
+<p>When a webhook is dispatched, the record topic is appended as a path component to the URL, for example: <code>https://webhook.host.example</code> becomes <code>https://webhook.host.example/connections</code> when a connection record is updated. A <code>POST</code> request is made to the resulting URL with the body of the request comprised by a serialized JSON object.</p>
+
+<p>The full set of properties of the current set of webhook payloads are listed below and references are included in the various flows when appropriate. Note that empty (null-value) properties are omitted.</p>
+
+<table><thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>init</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>invitation</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>request</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>response</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>active</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>error</td>
+<td>{WIP}</td>
+</tr>
+<tr>
+<td>inactive</td>
+<td>{WIP}</td>
+</tr>
+</tbody></table>
+<h2 id='connections-webhook'>Connections Webhook</h2>
+<blockquote>
+<p>Example of the <code>/topic/connections</code> webhook body that is received when the client calls <code>POST /connections</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"agent_ledger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mainNet"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b22888c8-4581-4bf8-b661-3cc453a28ab1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"response"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"their_did"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RZ6ye1Lyg4Hsh5yBdidxXY"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"their_label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ATB Proof"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>/topic/connections</code></p>
+<h2 id='credentials-webhook'>Credentials Webhook</h2>
+<blockquote>
+<p>Example of the <code>/topic/credentials</code> webhook body that is received when the client calls <code>POST /credentials</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"agent_ledger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mainNet"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2090c57c-8409-43c8-9c23-b7abca07d62e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11e28cba-5106-48ed-b6c4-1b64e0d5839b"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_definition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M4ZvcjqQPxt4QhqVM7pPb1:3:CL:32665:default"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"credential_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3fa85f64-5717-4562-b3fc-2c963f66afa6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request_received"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T20:57:25.964850Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T21:06:08.992530Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>/topic/credentials</code></p>
+<h2 id='verification-requests-webhook'>Verification Requests Webhook</h2>
+<blockquote>
+<p>Example of the <code>/topic/verification_requests</code> webhook body that is received when the client calls <code>POST /verification_requests</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"presentation_exchange_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"84b73ee1-6c90-4a3f-9aec-dcc4e8552f21"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-05-11T18:28:55.529787Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"connection_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2090c57c-8409-43c8-9c23-b7abca07d62e"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"request_sent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"presentation_request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VRT1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requested_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[{}]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"agent_ledger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mainNet"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p><code>/topic/verification_requests</code></p>
+<link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+<link rel='stylesheet' href='stylesheets/bootstrap_icons-61f673dc.css'>
+<link rel="stylesheet" href="tables/table_styles-24f61a53.css">
+
+<script>
+
+  class CollapsibleTable {
+    collapsibleClassName = "collapsible";
+    cicrcleClassName = "expand-circle";
+    expandAllButtonClassName = "parameter-header-button";
+    expandStatus = "expandAll";
+    expandCircleClassName = "expand-circle";
+
+    constructor(table) {
+      this.table = table;
+      this.collapsibles = this.getAllCollapsibles();
+      this.circles = this.getAllCircles();
+      this.expandAll = this.getExpandAllButton();
+      this.addEventListeners();
+    };
+
+    getAllCollapsibles() {
+      return this.table.getElementsByClassName(this.collapsibleClassName);
+    };
+    getAllCircles() {
+      return this.table.getElementsByClassName(this.cicrcleClassName);
+    };
+    getExpandAllButton() {
+      return this.table.getElementsByClassName(this.expandAllButtonClassName)[0];
+    };
+    addEventListeners() {
+      this.expandAll.addEventListener("click", (event) => {
+        this.expandCollapseAll(this.expandStatus === "expandAll" ? "expand" : "collapse");
+      });
+
+      for (let collapsibe of this.collapsibles) {
+        collapsibe.addEventListener("click", (event) => {
+          this.toggleOne(collapsibe);
+        });
+      }
+    };
+
+    expandOne(div) {
+      div.classList.add("active");
+      const content = div.nextElementSibling;
+      const status = "expanded";
+      content.style.display = "block";
+      content.setAttribute("aria-status", status);
+      this.toggleCircle(div, "expand");
+      this.checkExpandStatus();
+    };
+    collapseOne(div) {
+      div.classList.remove("active");
+      const content = div.nextElementSibling;
+      const status = "collapsed";
+      content.style.display = "none";
+      content.setAttribute("aria-status", status);
+      this.toggleCircle(div, "collapse");
+      this.checkExpandStatus();
+    };
+    toggleOne(div) {
+      event.currentTarget.classList.toggle("active");
+      const content = div.nextElementSibling;
+
+      let status = content.getAttribute("aria-status");
+
+      if (status === "expanded") {
+        content.style.display = "none";
+        status = "collapsed"
+      } else {
+        content.style.display = "block";
+        status = "expanded";
+      }
+      content.setAttribute("aria-status", status);
+      this.toggleCircle(div);
+      this.checkExpandStatus();
+    };
+
+    toggleCircle(div, action = "toggle") {
+      const toggleCircle = div.getElementsByClassName(this.expandCircleClassName)[0];
+
+      if (action === "toggle") {
+        toggleCircle.className.includes("bi-plus-circle")
+          ? toggleCircle.classList.replace("bi-plus-circle", "bi-dash-circle")
+          : toggleCircle.classList.replace("bi-dash-circle", "bi-plus-circle");
+      };
+
+      if (action === "expand") {
+        toggleCircle.classList.replace("bi-plus-circle", "bi-dash-circle");
+      };
+
+      if (action === "collapse") {
+        toggleCircle.classList.replace("bi-dash-circle", "bi-plus-circle");
+      }
+
+    }
+
+    expandCollapseAll(action = "expand") {
+      for (let element of this.collapsibles) {
+        if (action === "expand") this.expandOne(element);
+        else this.collapseOne(element);
+      }
+      this.checkExpandStatus();
+    };
+    toggleExpandStatus() {
+      this.expandStatus = this.expandStatus === "expandAll" ? "collapseAll" : "expandAll";
+    };
+    checkExpandStatus() {
+      const statuses = [];
+      for (let element of this.collapsibles) {
+        let status = element.nextElementSibling.getAttribute("aria-status");
+        statuses.push(status);
+      }
+      if (statuses.includes("expanded")) this.expandStatus = "collapseAll";
+      else this.expandStatus = "expandAll";
+      this.setExpandStatusButtonHTML();
+      return this.expandStatus;
+    };
+    setExpandStatusButtonHTML() {
+      this.expandAll.innerHTML = this.expandStatus === "expandAll" ? "EXPAND ALL" : "COLLAPSE ALL";
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const collapsibleTables = document.getElementsByClassName("collapsible-table");
+
+    const diagrams = document.getElementsByClassName("diagram");
+
+    for (let element of collapsibleTables) {
+      new CollapsibleTable(element);
+    }
+
+    for (let diagram of diagrams) {
+      diagram.addEventListener("click", () => {
+        window.open(diagram.src, '_blank');
+      });
+    }
+  });
+
+</script>
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
