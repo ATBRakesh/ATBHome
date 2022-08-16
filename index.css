@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #282828; /* background color */
-    --fg-color: #e2d3ba; /* default foreground color */
-    --fg-highlight: #d8a657; /* foreground color for "highlighted" items */
-    --pane-bg-color: #32302f; /* background color for panes e.g. search bar and link containers */
-    --button-color: #45403d; /* background color for buttons */
+    --bg-color: #073b4c; /* background color */
+    --fg-color: #118ab2; /* default foreground color */
+    --fg-highlight: #06d6a0; /* foreground color for "highlighted" items */
+    --pane-bg-color: #edf2f4; /* background color for panes e.g. search bar and link containers */
+    --button-color: #8d99ae; /* background color for buttons */
     --text-input-underline-unfocused: #7c6f64; /* underline color for text input when not focused */
     --text-input-underline-focused: var(--fg-highlight); /* underline color for text input when focused */
     --shadow-color: #1d2021; /* shadow color */
