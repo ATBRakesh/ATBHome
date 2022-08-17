@@ -5,13 +5,13 @@ function updateClock() {
     document.getElementById("current-time-text").innerText = date.toLocaleTimeString([], { hour12: false })
     const hour = date.getHours()
     if (hour < 5 || hour >= 18) {
-        document.getElementById("time-greeting").innerText = "Hello Innovator! Good evening."
+        document.getElementById("time-greeting").innerText = "Hello ATB Innovator! Good evening."
     }
     else if (hour < 12) {
-        document.getElementById("time-greeting").innerText = "Hello Innovator! Good morning."
+        document.getElementById("time-greeting").innerText = "Hello ATB Innovator! Good morning."
     }
     else {
-        document.getElementById("time-greeting").innerText = "Hello Innovator! Good afternoon."
+        document.getElementById("time-greeting").innerText = "Hello ATB Innovator! Good afternoon."
     }
 }
 
