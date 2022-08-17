@@ -1,12 +1,12 @@
 :root {
     --bg-color: #1c1c1c; /* background color */
     --fg-color: #f7f4f3; /* default foreground color */
-    --fg-highlight: #ee964b; /* foreground color for "highlighted" items */
+    --fg-highlight: #ffffff; /* foreground color for "highlighted" items */
     --pane-bg-color: #7a7a7a; /* background color for panes e.g. search bar and link containers */
-    --button-color: #ee964b; /* background color for buttons */
+    --button-color: #000000; /* background color for buttons */
     --text-input-underline-unfocused: #070707; /* underline color for text input when not focused */
     --text-input-underline-focused: var(--fg-highlight); /* underline color for text input when focused */
-    --shadow-color: #db7f8e; /* shadow color */
+    --shadow-color: #ffffff; /* shadow color */
 }
 
 body {
